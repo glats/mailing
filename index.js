@@ -1,5 +1,6 @@
 var Mailgen = require('mailgen');
 var path = require('path');
+var link = 'https://dxpress.cl/';
 
 // Configure mailgen by setting a theme and your product info
 var mailGenerator = new Mailgen({
@@ -9,12 +10,12 @@ var mailGenerator = new Mailgen({
     },
     product: {
         name: 'Dxpress',
-        link: 'https://dxpress.cl/',
+        link: link,
         path: path.resolve('themes/dxpress/index.html'),
         plaintextPath: path.resolve('themes/dxpress/index.txt'),
-        logo: 'images/dxpress-base/logo.png',
-        fullImage: 'images/dxpress-base/image-full.png',
-        footerImage: 'images/dxpress-base/image-footer.png',
+        logo: 'https://storage.googleapis.com/dxpress/email-logo.png',
+        fullImage: 'https://storage.googleapis.com/dxpress/image-full.png',
+        footerImage: 'https://storage.googleapis.com/dxpress/image-footer.png',
         text: 'La forma inteligente de pedir comida!!'
     }
 });
@@ -23,7 +24,7 @@ var mailGenerator = new Mailgen({
 var email = {
     body: {
         intro: ['¡Gracias por usar Dxpress!', '¡La forma inteligente de comprar comida!'],
-        outro: ['Ayudanos para ir mejorando cada vez más', 'Califica Al restaurant de tu pedido <a href="#" target="_blank">Click aquí!</a>'],
+        outro: ['Ayudanos para ir mejorando cada vez más', 'Califica Al restaurant de tu pedido <a href="' + link + '/rating" target="_blank">Click aquí!</a>'],
     }
 };
 
