@@ -13,7 +13,7 @@ var mailGenerator = new Mailgen({
         link: link,
         logo: 'https://storage.googleapis.com/dxpress/email-logo.png',
         fullImage: 'https://storage.googleapis.com/dxpress/image-full.png',
-        footerImage: 'https://storage.googleapis.com/dxpress/app-mobiles.png',
+        footerImage: 'https://storage.googleapis.com/dxpress/email-phone-image.png',
         text: 'La forma inteligente de pedir comida!!'
     }
 });
