@@ -1,5 +1,3 @@
-<%- title %>
-
 <% if (locals.intro) { %>
 <% intro.forEach(function (introItem) { -%>
 <%- introItem %>
@@ -12,18 +10,8 @@
 <% } -%>
 <% } %>
 
-<% if (locals.action) { %>
-<%- action.instructions %>
-<%- action.button.link %>
-<% } %>
-
 <% if (locals.outro) { %>
 <% outro.forEach(function (outroItem) { -%>
 <%- outroItem %>
 <% }) -%>
 <% } %>
-
-<%- signature %>,
-<%- product.name %>
-
-<%- product.copyright %>

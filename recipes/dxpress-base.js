@@ -1,21 +1,19 @@
 var Mailgen = require('mailgen');
 var path = require('path');
+var link = 'https://dxpress.cl/';
 
 // Configure mailgen by setting a theme and your product info
 var mailGenerator = new Mailgen({
     theme: {
-        // Build an absolute path to the theme file within your project
-        path: path.resolve('dxpress/index.html'),
-        // Also (optionally) provide the path to a plaintext version of the theme (if you wish to use `generatePlaintext()`)
-        plaintextPath: path.resolve('dxpress/index.txt')
+        path: path.resolve('themes/dxpress-base/index.html'),
+        plaintextPath: path.resolve('themes/dxpress-base/index.txt')
     },
     product: {
         name: 'Dxpress',
-        link: 'https://dxpress.cl/',
-        path: path.resolve('dxpress/index.html'),
-        // Also (optionally) provide the path to a plaintext version of the theme (if you wish to use `generatePlaintext()`)
-        plaintextPath: path.resolve('dxpress/index.txt'),
-        logo: 'logo.png',
+        link: link,
+        logo: 'https://storage.googleapis.com/dxpress/email-logo.png',
+        fullImage: 'https://storage.googleapis.com/dxpress/image-full.png',
+        footerImage: 'https://storage.googleapis.com/dxpress/image-footer.png',
         text: 'La forma inteligente de pedir comida!!'
     }
 });
@@ -24,7 +22,7 @@ var mailGenerator = new Mailgen({
 var email = {
     body: {
         intro: ['¡Gracias por usar Dxpress!', '¡La forma inteligente de comprar comida!'],
-        outro: ['Ayudanos para ir mejorando cada vez más', 'Califica Al restaurant de tu pedido <a href="#" target="_blank">Click aquí!</a>'],
+        outro: ['Ayudanos para ir mejorando cada vez más', 'Califica Al restaurant de tu pedido <a href="' + link + '/rating" target="_blank">Click aquí!</a>'],
     }
 };
 

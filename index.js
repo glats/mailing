@@ -5,14 +5,12 @@ var link = 'https://dxpress.cl/';
 // Configure mailgen by setting a theme and your product info
 var mailGenerator = new Mailgen({
     theme: {
-        path: path.resolve('themes/dxpress/index.html'),
-        plaintextPath: path.resolve('themes/dxpress/index.txt'),
+        path: path.resolve('themes/dxpress-base/index.html'),
+        plaintextPath: path.resolve('themes/dxpress-base/index.txt')
     },
     product: {
         name: 'Dxpress',
         link: link,
-        path: path.resolve('themes/dxpress/index.html'),
-        plaintextPath: path.resolve('themes/dxpress/index.txt'),
         logo: 'https://storage.googleapis.com/dxpress/email-logo.png',
         fullImage: 'https://storage.googleapis.com/dxpress/image-full.png',
         footerImage: 'https://storage.googleapis.com/dxpress/image-footer.png',
