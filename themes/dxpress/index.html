@@ -47,7 +47,7 @@ locals.action.button.color = '#3869D4';
       width: 100%;
       margin: 0;
       padding: 0;
-      background-color: #F2F4F6;
+      background-color: #1C2238;
     }
     .email-content {
       width: 100%;
@@ -81,7 +81,7 @@ locals.action.button.color = '#3869D4';
         margin: 0;
         padding: 0;
         background-color: #FF5754;
-        color: white;
+        color: #FFF;
     }
     .email-logo_inner {
         width: 600px;
@@ -100,7 +100,7 @@ locals.action.button.color = '#3869D4';
         width: 100%;
         margin: 0;
         padding: 0;
-        background-color: white;
+        background-color: #1C2238;
     }
     .email-image_inner {
         width: 570px;
@@ -114,13 +114,28 @@ locals.action.button.color = '#3869D4';
       width: 100%;
       margin: 0;
       padding: 0;
-      border-bottom: 1px solid #EDEFF2;
-      background-color: #FFF;
+      background-color: #1C2238;
     }
     .email-body_inner {
       width: 570px;
       margin: 0 auto;
       padding: 0;
+      border-bottom: 1px solid #FFF;
+    }
+    .email-image-footer {
+        width: 100%;
+        margin: 0;
+        background-color: #1C2238;
+        text-align: center;
+    }
+    .email-image-footer_inner {
+        width: 570px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .email-image-footer_full {
+        padding-top: 35px;
+        text-align: center;
     }
     .email-footer {
       width: 570px;
@@ -162,6 +177,19 @@ locals.action.button.color = '#3869D4';
     }
     .content-cell {
       padding: 35px;
+      text-align: center;
+    }
+    .content-cell p {
+      margin: 0;
+      color: #FFF;
+      font-size: 25px;
+    }
+    #content-cell p:nth-child(2) {
+      color: #FF5754;
+      margin-bottom: 20px;
+    }
+    #content-cell p a {
+      color: #FF5754;
     }
     .align-right {
       text-align: right;
@@ -290,7 +318,7 @@ locals.action.button.color = '#3869D4';
                 <table class="email-image_inner" cellpadding="0" cellspacing="0">
                     <tr>
                         <td class="email-image_full">
-                            <img src="image-full.png">
+                            <img src="<%- product.fullImage %>">
                         </td>
                     </tr>
                 </table>
@@ -302,8 +330,7 @@ locals.action.button.color = '#3869D4';
             <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0">
               <!-- Body content -->
               <tr>
-                <td class="content-cell">
-                  <h1><%- title %></h1>
+                <td id="content-cell" class="content-cell" align="center" valign="middle">
                   <% if (locals.intro) { %>
                   <% intro.forEach(function (introItem) { -%>
                   <p><%- introItem %></p>
@@ -313,6 +340,15 @@ locals.action.button.color = '#3869D4';
                   <!-- Dictionary -->
                   <% if (locals.dictionary) { %>
                   <dl class="body-dictionary">
+                    <% for (item in dictionary) { -%>
+                    <dt><%- item.charAt(0).toUpperCase() + item.slice(1) %>:</dt>
+                    <dd><%- dictionary[item] %></dd>
+                    <% } -%>
+                  </dl>
+                  <% } %>
+
+                  <% if (locals.description) { %>
+                  <dl class="body-description">
                     <% for (item in dictionary) { -%>
                     <dt><%- item.charAt(0).toUpperCase() + item.slice(1) %>:</dt>
                     <dd><%- dictionary[item] %></dd>
@@ -396,12 +432,6 @@ locals.action.button.color = '#3869D4';
                   <% }) -%>
                   <% } %>
 
-                  <p>
-                    <%- signature %>,
-                    <br>
-                    <%- product.name %>
-                  </p>
-
                   <% if (locals.action) { %>
                   <!-- Sub copy -->
                   <table class="body-sub">
@@ -420,13 +450,11 @@ locals.action.button.color = '#3869D4';
           </td>
         </tr>
         <tr>
-          <td>
-            <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0">
+          <td class="email-image-footer" width="100%">
+            <table class="email-image-footer_inner" align="center" width="570"  cellpadding="0" cellspacing="0">
               <tr>
-                <td class="content-cell">
-                  <p class="sub center">
-                    <%- product.copyright %>
-                  </p>
+                <td class="email-image-footer_full">
+                  <img src="<%- product.footerImage %>" usemap="#imgmap201662815241">
                 </td>
               </tr>
             </table>
@@ -436,5 +464,9 @@ locals.action.button.color = '#3869D4';
     </td>
   </tr>
 </table>
+<map name="imgmap201662815241">
+  <area shape="rect" alt="App Sotre" title="" coords="47,49,133,75" href="https://itunes.apple.com/us/app/dxpress-delivery/id1114638857" target="_blank" />
+  <area shape="rect" alt="Google Play" title="" coords="148,47,232,77" href="https://play.google.com/store/apps/details?id=com.dxpress.client" target="_blank" />
+</map>
 </body>
 </html>

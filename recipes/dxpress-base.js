@@ -4,17 +4,18 @@ var path = require('path');
 // Configure mailgen by setting a theme and your product info
 var mailGenerator = new Mailgen({
     theme: {
-        path: path.resolve('themes/dxpress/index.html'),
-        plaintextPath: path.resolve('themes/dxpress/index.txt'),
+        // Build an absolute path to the theme file within your project
+        path: path.resolve('dxpress/index.html'),
+        // Also (optionally) provide the path to a plaintext version of the theme (if you wish to use `generatePlaintext()`)
+        plaintextPath: path.resolve('dxpress/index.txt')
     },
     product: {
         name: 'Dxpress',
         link: 'https://dxpress.cl/',
-        path: path.resolve('themes/dxpress/index.html'),
-        plaintextPath: path.resolve('themes/dxpress/index.txt'),
-        logo: 'images/dxpress-base/logo.png',
-        fullImage: 'images/dxpress-base/image-full.png',
-        footerImage: 'images/dxpress-base/image-footer.png',
+        path: path.resolve('dxpress/index.html'),
+        // Also (optionally) provide the path to a plaintext version of the theme (if you wish to use `generatePlaintext()`)
+        plaintextPath: path.resolve('dxpress/index.txt'),
+        logo: 'logo.png',
         text: 'La forma inteligente de pedir comida!!'
     }
 });
