@@ -1,0 +1,7 @@
+{
+  "name": "Mailing",
+  "version": "0.0.1",
+  "dependencies": {
+    "mailgen": "^1.0.25"
+  }
+}
