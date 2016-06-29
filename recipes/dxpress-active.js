@@ -23,6 +23,10 @@ var email = {
     body: {
         intro: ['Para activar su cuenta haga click o copie', 'el siguiente enlace en su navegador'],
         outro: ['<a href="' + link + 'rating" target="_blank">' + link + 'rating</a>'],
+        goToAction: {
+            text: 'Para activar su cuenta haga click o copie el siguiente enlace en su navegador',
+            link: link + 'rating'
+        }
     }
 };
 
