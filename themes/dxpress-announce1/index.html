@@ -59,7 +59,7 @@ locals.action.button.color = '#3869D4';
       width: 100%;
       margin: 0;
       padding: 0;
-      background-color: #5F0056;
+      background-color: #E4E4E4;
     }
     .email-image_inner {
       width: 570px;
@@ -69,7 +69,7 @@ locals.action.button.color = '#3869D4';
     .email-image-footer {
       width: 100%;
       margin: 0;
-      background-color: #5F0056;
+      background-color: #E4E4E4;
       text-align: center;
     }
     .email-image-footer_inner {
@@ -78,7 +78,6 @@ locals.action.button.color = '#3869D4';
       padding: 0;
     }
     .email-image-footer_full {
-      padding-top: 35px;
       text-align: center;
     }
     /* Masthead ----------------------- */
@@ -106,12 +105,13 @@ locals.action.button.color = '#3869D4';
       width: 100%;
       margin: 0;
       padding: 0;
-      background-color: #5F0056;
+      background-color: #E4E4E4;
     }
     .email-body_inner {
       width: 570px;
       margin: 0 auto;
       padding: 0;
+      background-color: #5f0056;
     }
     .email-footer {
       width: 570px;
@@ -152,8 +152,24 @@ locals.action.button.color = '#3869D4';
       border-top: 1px solid #EDEFF2;
     }
     .content-cell {
-      padding: 35px;
+      padding: 20px 0 20px 0;
       text-align: center;
+    }
+
+    .intro-item-text-0 {
+      font-size: 35px;
+      margin: 0;
+      padding: 0;
+    }
+    .intro-item-text-1 {
+      font-size: 22px;
+      margin: 0;
+      padding: 0;
+    }
+    .intro-item-text-2 {
+      font-size: 22px;
+      margin: 0;
+      padding: 0;
     }
     .align-right {
       text-align: right;
@@ -286,8 +302,8 @@ locals.action.button.color = '#3869D4';
               <tr>
                 <td id="content-cell" class="content-cell">
                   <% if (locals.intro) { %>
-                  <% intro.forEach(function (introItem) { -%>
-                  <p><%- introItem %></p>
+                  <% intro.forEach(function (introItem, index) { -%>
+                  <p class="intro-item-text-<%- index %>"><%- introItem %></p>
                   <% }) -%>
                   <% } %>
 

@@ -20,7 +20,7 @@ var mailGenerator = new Mailgen({
 // Prepare email contents
 var email = {
     body: {
-        intro: ['¿Aburrido de esperar?', '¡Te invitamos a conocer y disfrutar', 'de la forma inteligente de pedir comida!', '<a href="https://dxpress.cl">www.dxpress.cl</a>'],
+        intro: ['¿Aburrido de Esperar?', '¡Te invitamos a conocer y disfrutar', 'de la forma inteligente de pedir comida!', '<a href="https://dxpress.cl">www.dxpress.cl</a>'],
         goToAction: {
             text: 'Para activar su cuenta haga click o copie el siguiente enlace en su navegador',
             link: link + 'rating'
