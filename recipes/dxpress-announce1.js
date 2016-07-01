@@ -5,24 +5,22 @@ var link = 'https://dxpress.cl/';
 // Configure mailgen by setting a theme and your product info
 var mailGenerator = new Mailgen({
     theme: {
-        path: path.resolve('themes/dxpress-active/index.html'),
-        plaintextPath: path.resolve('themes/dxpress-active/index.txt')
+        path: path.resolve('themes/dxpress-announce1/index.html'),
+        plaintextPath: path.resolve('themes/dxpress-announce1/index.txt')
     },
     product: {
         name: 'Dxpress',
         link: link,
-        logo: 'https://storage.googleapis.com/dxpress/email-logo.png',
-        fullImage: 'https://storage.googleapis.com/dxpress/image-full.png',
-        footerImage: 'https://storage.googleapis.com/dxpress/email-phone-image.png',
-        text: 'La forma inteligente de pedir comida!!'
+        logo: 'https://storage.googleapis.com/dxpress/email-color-logo.png',
+        fullImage: 'https://storage.googleapis.com/dxpress/email-hamburger.png',
+        footerImage: 'https://storage.googleapis.com/dxpress/email-footer-announce.png'
     }
 });
 
 // Prepare email contents
 var email = {
     body: {
-        intro: ['Para activar su cuenta haga click o copie', 'el siguiente enlace en su navegador'],
-        outro: ['<a href="' + link + 'rating" target="_blank">' + link + 'rating</a>'],
+        intro: ['¿Aburrido de esperar?', '¡Te invitamos a conocer y disfrutar', 'de la forma inteligente de pedir comida!', '<a href="https://dxpress.cl">www.dxpress.cl</a>'],
         goToAction: {
             text: 'Para activar su cuenta haga click o copie el siguiente enlace en su navegador',
             link: link + 'rating'
