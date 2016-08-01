@@ -18,7 +18,7 @@ var mailGenerator = new Mailgen({
         footerImage: 'https://storage.googleapis.com/dxpress/email-large-footer.png',
         text: '¡SEGUIMIENTO EN TIEMPO REAL!',
         text_inner: 'GRAN VARIEDAD DE RESTAURANTES',
-        text_header: ['¡Descúbrenos!', 'La forma inteligente de pedir comida'],
+        text_header: ['Hola {{nombre}}  {{apellido}}','¡Descúbrenos!', 'La forma inteligente de pedir comida'],
         button: {
             link: 'https://dxpress.cl',
             text: '¡NO MÁS ESPERAS! CLIC AQUÍ',
