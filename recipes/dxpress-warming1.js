@@ -19,8 +19,8 @@ var mailGenerator = new Mailgen({
 // Prepare email contents
 var email = {
     body: {
-        intro: ['¡Importante!', 'Hay clientes que estan visitando su Restaurant en Dxpress'],
-        outro: ['¡Inicie sesión para recibir los pedidos!', '<a href="' + link + '" target="_blank">' + link + '</a>'],
+        intro: ['¡Importante!', 'Tu restaurante esta perdiendo pedidos, si quieres aceptarlos inicia sesión en'],
+        outro: ['', '<a href="' + link + '" target="_blank">' + link + '</a>']
     }
 };
 
